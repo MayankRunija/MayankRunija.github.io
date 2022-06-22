@@ -16,7 +16,95 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+:root {
+  --theme-color: #149ddd;
+  --theme-text: #ffffff;
+  --theme-text2: #fffff0;
+  --theme-black: #000000;
+}
+.dark-mode {
+  background-color: var(--theme-black);
+  color: var(--theme-text);
+  transition: 1.5s ease-in-out;
+}
+.theme-mode {
+  width: 75px;
+  background: var(--theme-color);
+  height: 45px;
+  position: fixed;
+  right: 0px;
+  top: 70px;
+  transition: 1s ease-in-out;
+  transform: scaleX(-1);
+  z-index: 10000;
+  box-shadow: 0px 0px 10px white;
+  border-radius: 0px 50px 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+#moon{
+  display: none;
+  transition: 1s ease-in-out;
+}
+
+.theme-mode i {
+  font-size: 30px;
+  color: white;
+  transition: 1s ease-in-out;
+}
+
+body {
+  margin: 0;
+  transition: 1.5s ease-in-out;
+  
+}
+.text-bold {
+  font-weight: bold;
+}
+.color-theme {
+  color: var(--theme-color);
+}
+.width-75 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .width-75 {
+      width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .name_container {
+      text-align: center !important;
+  }
+  .name_container h1 {
+      font-size: 40px !important;
+  }
+  .name_container p {
+      font-size: 26px !important;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .my_image {
+      width: 300px !important;
+      height: 300px !important;
+  }
+}
+
+@keyframes logoAnimation {
+  0% {
+      opacity: 0;
+  }
+  50%{
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
