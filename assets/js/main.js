@@ -2,9 +2,7 @@
 (function() {
   "use strict";
 
-  /**
-   * Easy selector helper function
-   */
+ 
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -14,9 +12,6 @@
     }
   }
 
-  /**
-   * Easy event listener function
-   */
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
     if (selectEl) {
@@ -28,16 +23,12 @@
     }
   }
 
-  /**
-   * Easy on scroll event listener 
-   */
+ 
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
 
-  /**
-   * Navbar links active state on scroll
-   */
+  
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
@@ -66,9 +57,7 @@
     })
   }
 
-  /**
-   * Back to top button
-   */
+ 
   let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
@@ -249,3 +238,22 @@
   });
 
 })()
+  const theme_mode = document.getElementById('theme-mode');
+  const moon = document.getElementById('moon');
+  const sun = document.getElementById('sun');
+  var curr_mode = 'dark';
+  function changeTheme() {
+      if (curr_mode === 'light') {
+          moon.style.display = 'none';
+          sun.style.display = 'block';
+          curr_mode = 'dark';
+          var element = document.body;
+          element.classList.toggle("dark-mode");
+      } else {
+          sun.style.display = 'none';
+          moon.style.display = 'block';
+          curr_mode = 'light';
+          var element = document.body;
+          element.classList.toggle("dark-mode");
+      }
+  }
