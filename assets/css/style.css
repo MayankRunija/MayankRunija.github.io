@@ -338,10 +338,6 @@ section {
   overflow: hidden;
 }
 
-.section-bg {
-  background: #f5f8fd;
-}
-
 .section-title {
   padding-bottom: 30px;
 }
@@ -476,7 +472,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Resume
+# education
 --------------------------------------------------------------*/
 .resume .resume-title {
   font-size: 26px;
