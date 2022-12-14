@@ -1,5 +1,6 @@
 <?php
- 
+
+
   $receiving_email_address = 'mickeyruni18@gmail.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
@@ -8,7 +9,7 @@
     die( 'Unable to load the "PHP Email Form" Library!');
   }
 
-  $contact = new PHP_Email_Form;
+  // $contact = new PHP_Email_Form;
   $contact->ajax = true;
   
   $contact->to = $receiving_email_address;
@@ -16,11 +17,13 @@
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
 
-
   
-  
-
-
+  $contact->smtp = array(
+    'host' => 'sql6.freesqldatabase.com',
+    'username' => 'sql6584656',
+    'password' => '5yGnyBTddG',
+    'port' => '3306'
+  );
   
 
   $contact->add_message( $_POST['name'], 'From');
