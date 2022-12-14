@@ -37,7 +37,7 @@
 // database connection code
  $con = mysqli_connect('sql6.freesqldatabase.com', 'sql6584656', '5yGnyBTddG','sql6584656');
 
-$con = mysqli_connect('localhost', 'root', '','db_contact');
+// $con = mysqli_connect('localhost', 'root', '','db_contact');
 //name	email	subject
 // get the post records
 $txtName = $_POST['name'];
