@@ -197,7 +197,7 @@
   });
 
   /**
-   * Testimonials slider
+   * Projects slider
    */
   new Swiper('.testimonials-slider', {
     speed: 600,
@@ -238,6 +238,9 @@
   });
 
 })()
+/**
+   * Theme Change
+   */
   const theme_mode = document.getElementById('theme-mode');
   const moon = document.getElementById('moon');
   const sun = document.getElementById('sun');
